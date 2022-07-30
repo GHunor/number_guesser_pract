@@ -3,12 +3,12 @@ import random
 
 print("Welcome to number guesser!")
 
+#random.seed()
+playing = input("Do you want to play? ")
+
 if playing.lower() != "yes":
     print("k thx by!")
     quit()
-
-#random.seed()
-playing = input("Do you want to play? ")
 
 
 start = int(input("Between? "))
@@ -23,7 +23,12 @@ score = 1
 guess = the_number-1;
 
 while guess != the_number:
-    guess = int(input("What's your guess? "))
+    guess_s = input("What's your guess? ")
+    if guess_s.isdigit():
+        guess = int(guess_s)
+    else
+        print("Please give a number")
+        continue
     if guess < the_number:
       print("It's bigger than " + str(guess) + ".")
       score += 1
