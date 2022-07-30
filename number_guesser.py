@@ -26,7 +26,7 @@ while guess != the_number:
     guess_s = input("What's your guess? ")
     if guess_s.isdigit():
         guess = int(guess_s)
-    else
+    else:
         print("Please give a number")
         continue
     if guess < the_number:
